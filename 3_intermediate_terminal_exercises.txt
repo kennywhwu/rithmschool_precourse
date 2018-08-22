@@ -1,0 +1,54 @@
+Part I
+Answer the following questions:
+
+Create an environment variable called FIRST_NAME and set it equal to your first name (this does not need to be permanent)
+- export FIRST_NAME=Kenny
+Print the FIRST_NAME variable
+- echo $FIRST_NAME
+Print out the $PATH variable
+- echo $PATH
+What is the $PATH variable?
+- Path to the environment
+Why would you want to create an environment variable?
+- Set an alias for ease of repetition to a specific attribute of the environment
+How do you permanently save environment variables?
+- Open environment config file, set changes to variable, then save
+What is a process?
+- Program that is being executed
+How do you list all processes running on your machine?
+- ps -aux
+What is a PID?
+- Unique identifier for specific processes
+How do you terminate a process?
+- kill or kill -9
+What is the difference between kill and kill -9?
+- kill sends a signal to process, kill -9 specifies the kill signal and can't be stopped
+What grep flag allows for case insensitive search?
+- -i
+What grep flag allows for a certain number of lines before the match?
+- -B
+What grep flag allows for a certain number of lines around the match?
+- -C
+What grep flag allows for a certain number of lines after the match?
+- -A
+What grep flag allows for full word search?
+- -w
+What grep flag shows you the line number of a match?
+- -n
+Part II
+Write the following terminal commands to do the following (assume that instructors.txt is an imaginary file):
+
+Find all files inside the Desktop folder that have a name of "learn."
+- find ~/Desktop -name 'learn'
+Find all files inside the Desktop folder that start with a "P."
+- find ~/Desktop -name 'P.*'
+Find all files inside the Desktop folder that end with .txt.
+- find ~/Desktop -name '*.txt'
+Find all files inside the Desktop/views folder that have the name data somewhere in their filename.
+- find ~/Desktop/views -name '*data*'
+Inside of the instructors.txt file, output the number of times the word "Elie" appears.
+- grep -c 'Elie' instructors.txt
+Inside of the instructors.txt file, list all matches for any full word that starts with a capital "P."
+- grep -w 'P.*' instructors.txt
+Inside of the instructors.txt file, list all the line numbers for any full word that starts with a "z" (it should match regardless of upper or lower case).
+- grep -nwi 'z*' instructors.txt
